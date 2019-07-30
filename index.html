@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Stamps | Simple way to organize your inspirations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="style/index.css">
+
+</head>
+<body>
+    <header>
+        <nav class="main-nav white container">
+            <div class="logo"><img src="./images/logo.png"></div>
+            <div class="menu row-sm">
+                <a href="#" class="white"><p>About</p></a>
+                <a href="#" class="white"><p>Integrations</p></a>
+                <a href="#" class="white"><p>Pricing</p></a>
+                <a href="#" class="white"><p>Contacts</p></a>
+            </div>
+        </nav>
+    </header>
+    <nav class="dropdown">
+        <div class="mobile-menu menu">
+            <a href="#"><p>About</p></a>
+            <a href="#"><p>Integrations</p></a>
+            <a href="#"><p>Pricing</p></a>
+            <a href="#"><p>Contacts</p></a>
+            <a><p>help</p></a>
+            <a><p>terms of use</p></a>
+            <a><p>privacy policy</p></a>
+        </div>
+    </nav>
+    <section id="hero-1" class="full full-bg-image white center">
+        <nav class="mobile-nav">
+            <div class="row justify-with-space">
+                <div class="logo"><img src="./images/logo.png"></div>
+                <img class='menu_button' src="images/menu_button.svg" onclick="menuHandler(event)"/>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="content-container">
+                <h1>Simple Way to<br>Organize Your<br>Inspirations</h1>
+                <p>I think what motivates people is not great hate,<br>but great love for other people</p>
+            </div>
+            <div class="content-container">
+                <div class="">
+                    <h4 class="uppercase text-center">sign up for free</h4>
+                </div>
+                <form>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="E-mail">
+                    <input id="password-field" type="password" name="Password" placeholder="Password">
+                    <input class="btn" type="submit" name="submit" value="Sign up  >"/>
+                    <div id="passwordVisibilityIcon" class="icon"><img src="images/pw-visible-icon.png"></div>
+                </form>
+                <div class="mt-1">
+                    <h6 class="text-center grey">By clicking "Sign Up" I agree to our</h6>
+                    <h6 class="text-center">Terms of Service</h6>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container white row justify-with-space">
+                <div class="ml-5"><h6>2016 stamp. All rights reserved</h6></div>
+                <div class="menu row white uppercase desktop">
+                    <a><p>contact</p></a>
+                    <a><p>help</p></a>
+                    <a><p>terms of use</p></a>
+                    <a><p>privacy policy</p></a>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script type="text/javascript">
+        function menuHandler(event){
+            console.log(event);
+            let menu = document.getElementsByClassName('dropdown')[0];
+            if(menu.classList.contains('active')) {
+                menu.classList.remove('active')
+            } else {
+                menu.classList.add('active')
+            }
+        }
+    </script>
+</body>
+</html>
